@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="top">
+        <h1>Roleta</h1>
+        <h2>Porque?</h2>
+        <h3>Simplesmente para ver se eu dou algum presente para minha muie ao girar!</h3>
+        <div class="flex">
+            <p>Chance de ganhar</p>
+            <p class="green">&nbsp; 10%&nbsp;</p>
+            <p>de perder</p>
+            <p class="red">&nbsp; 90%&nbsp;</p>
+        </div>
+        <div class="roleta-container">
+            <div class="roleta" [style.transform]="'rotate(' + postionRotation + 'deg)'">
+                <div *ngFor="let segment of segments; let i = index" class="segment" [style.transform]="'rotate(' + (i * segmentsAngulo) + 'deg)'">
+                    {{ segment }}
+                </div>
+            </div>
+            <button (click)="spin()">Girar</button>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik", system-ui;
+}
+
+.top {
+    width: 700px;
+    height: 350px;
+    background: rgb(35, 35, 45);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.green {
+    color: rgb(0, 255, 0);
+    font-weight: 700;
+}
+
+.red {
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+}
+
+.top h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.top h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.top h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+/* */
+
+.roleta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.roleta {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    position: relative;
+    overflow: hidden;
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: lightblue;
+    transform-origin: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
+    /* Garante que o segmento seja um triângulo */
+}
